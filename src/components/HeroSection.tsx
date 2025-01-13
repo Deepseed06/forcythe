@@ -14,7 +14,7 @@ const HeroSection = () => {
         priority
         className='opacity-10'
       />
-      <div className="max-w-[1000px] relative z-10 text-left font-light bg-white p-16 leading-3 py-8 bg-opacity-10  rounded-3xl -mt-14">
+      <div className="max-w-[1000px] relative z-10 text-left font-light bg-white p-12 leading-3 py-8 bg-opacity-10  rounded-3xl  lg:-mt-14">
         <h1 className="text-4xl font-semibold md:text-6xl lg:text-7xl  text-white mb-4 ">
         We build <span className='text-text'>products</span> that shape a better future
         </h1>

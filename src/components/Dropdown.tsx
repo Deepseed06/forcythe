@@ -13,7 +13,7 @@ export function DropdownMenuBtn() {
       <DropdownMenuTrigger asChild>
       <div className='text-3xl md:hidden bg-gray-700 p-2 rounded-lg cursor-pointer'> <BiMenuAltLeft/></div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="m-auto top-10">
+      <DropdownMenuContent className="-m-14">
               <GlowingBorderCard/>
     </DropdownMenuContent>
     </DropdownMenu>
