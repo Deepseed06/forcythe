@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Button from './Button'
 import mapImg from '../../public/images/map.png'
+import AnimatedText from './AnimatedText'
 const HeroSection = () => {
   return (
     <section className=" h-screen flex items-center justify-center">
@@ -15,9 +16,13 @@ const HeroSection = () => {
         className='opacity-10'
       />
       <div className="max-w-[1000px] relative z-10 text-left font-light bg-white p-12 leading-3 py-8 bg-opacity-10  rounded-3xl  lg:-mt-14">
-        <h1 className="text-4xl font-semibold md:text-6xl lg:text-7xl  text-white mb-4 ">
-        We build <span className='text-text'>products</span> that shape a better future
-        </h1>
+        <AnimatedText
+        highlightColor='text-[#60a6e7]'
+        text=' We build products that shape a better future'
+        className='text-4xl font-semibold md:text-6xl lg:text-7xl  text-white mb-4'
+        highlightWords={["products"]}
+        />
+        
        <div className='text-left p-4'>
        <p className="text-xl md:text-2xl text-gray-200 mb-8">
         We&apos;re the architects of digital excellence across industries. 

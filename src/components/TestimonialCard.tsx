@@ -2,15 +2,18 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-// import { testifiers } from '@/constants/images'
+import Image from 'next/image'
+
 interface AppearingTextCardProps {
   title: string
   content: string
-//   imageSrc: string
-//   imageAlt: string
+  imageSrc: string
+  imageAlt: string
+  footer: string
 }
 
-const TestimonialCard: React.FC<AppearingTextCardProps> = ({ title, content }) => {
+
+const TestimonialCard: React.FC<AppearingTextCardProps> = ({ title, content, imageSrc,imageAlt,footer }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,42 +36,43 @@ const TestimonialCard: React.FC<AppearingTextCardProps> = ({ title, content }) =
   }
 
   return (
-    <div className="bg-white rounded-lg  overflow-hidden max-w-4xl mx-auto">
-      <div className="flex flex-row md:flex-row">
-        <div className="md:w-1/2 p-6">
+    <div className="bg-main  rounded-lg  overflow-hidden w-full">
+      <div className="w-full flex flex-row md:flex-row">
+        <div className="md:w-1/2 p-8 ">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
           >
             <motion.h2 
-              className="text-2xl font-bold mb-4 text-gray-800"
+              className="text-2xl font-bold mb-4 text-white"
               variants={itemVariants}
             >
               {title}
             </motion.h2>
             <motion.p 
-              className="text-gray-600"
+              className="text-white font-bold"
               variants={itemVariants}
             >
               {content}
             </motion.p>
+            <motion.p 
+              className="text-white mt-6 font-bold"
+              variants={itemVariants}
+            >
+              {footer}
+            </motion.p>
           </motion.div>
         </div>
-        <div className="md:w-1/2 relative h-64 md:h-auto">
-          {/* {
-            testifiers.map((item) => (
-                <div key={item.id}>
+        <div className="md:w-1/2  relative h-96  w-full md:h-auto">
+       
 
                     <Image
-                      src={item.imgSrc}
+                      src={imageSrc}
                       alt={imageAlt}
                       layout="fill"
                       objectFit="cover"
                     />
-                </div>
-            ))
-          } */}
         </div>
       </div>
     </div>
